@@ -1,5 +1,9 @@
 @mixin container_1 {
-  max-width: 1903px;
+  max-width: 1180px;
   width: 100%;
-  margin: 0 -3em;
+}
+
+@mixin container_2 {
+  max-width: 1000px;
+  width: 100%;
 }

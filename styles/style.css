@@ -7,7 +7,14 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  border-bottom: 1px solid rgba(91, 97, 110, 0.1);
+  width: 100%;
 }
 
 .header .header__top {
@@ -38,7 +45,7 @@ body {
 }
 
 .header .nav {
-  border-bottom: 1px solid rgba(91, 97, 110, 0.2);
+  background-color: #ffffff;
 }
 
 .header .nav .nav__group {
@@ -55,14 +62,14 @@ body {
   margin: 0 21.4em;
 }
 
-.header .nav .nav__logo .logo {
+.header .nav .nav__group .nav__logo .logo {
   max-width: 112px;
   max-height: 20px;
   width: 100%;
   height: 100%;
 }
 
-.header .nav .nav__links {
+.header .nav .nav__group .nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,25 +81,27 @@ body {
           align-items: center;
   max-width: 700px;
   width: 100%;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.86rem;
+  font-weight: 500;
+  margin-top: 0.15em;
+  margin-left: 2em;
   text-transform: capitalize;
 }
 
-.header .nav .nav__links .link a {
+.header .nav .nav__group .nav__links .link a {
   color: #0a0b0d;
   text-decoration: none;
 }
 
-.header .nav .nav__links .link {
+.header .nav .nav__group .nav__links .link {
   cursor: pointer;
 }
 
-.header .nav .nav__links .non-link {
+.header .nav .nav__group .nav__links .non-link {
   cursor: context-menu;
 }
 
-.header .nav .nav__links .nav__link {
+.header .nav .nav__group .nav__links .nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,52 +111,64 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 18px;
   height: 66px;
+  margin: 0 1.26em;
   border-bottom: 4px solid transparent;
 }
 
-.header .nav .nav__links span:hover {
-  border-bottom: 4px solid #0667d0;
+.header .nav .nav__group .nav__links span:hover {
+  border-bottom: 4px solid #004beb;
 }
 
-.header .nav__sign-in-up {
+.header .nav .nav__sign-in-up {
   padding: 1.25em 0;
 }
 
-.header .nav__sign-in-up .nav__sign-in,
-.header .nav__sign-in-up .nav__sign-up {
-  font-size: 0.9rem;
-  font-weight: 700;
+.header .nav .nav__sign-in-up .nav__sign-in,
+.header .nav .nav__sign-in-up .nav__sign-up {
+  font-size: 0.85rem;
+  font-weight: 500;
   text-decoration: none;
   cursor: pointer;
 }
 
-.header .nav__sign-in-up .nav__sign-in {
+.header .nav .nav__sign-in-up .nav__sign-in {
   color: #0a0b0d;
   margin-right: 1em;
 }
 
-.header .nav__sign-in-up .nav__sign-in:hover {
+.header .nav .nav__sign-in-up .nav__sign-in:hover {
   color: #0052ff;
 }
 
-.header .nav__sign-in-up .nav__sign-up {
+.header .nav .nav__sign-in-up .nav__sign-up {
   color: #ffffff;
   background-color: #0052ff;
   border: 1px solid #0052ff;
   border-radius: 4px;
-  padding: 0.45em 0.834em;
+  padding: 0.74em 0.887em;
+  text-decoration: none;
 }
 
-.header .nav__sign-in-up .nav__sign-up:hover {
-  background-color: #0667d0;
+.header .nav .nav__sign-in-up .nav__sign-up:hover {
+  background-color: #004beb;
+}
+
+.future {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .future__container {
-  max-width: 1903px;
+  max-width: 1180px;
   width: 100%;
-  margin: 0 -3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,9 +181,9 @@ body {
 }
 
 .future .logo {
-  max-width: 630px;
+  max-width: 650px;
   width: 100%;
-  margin: 2.5em 1em;
+  margin: 3em 0 3em 0;
 }
 
 .future .future__text {
@@ -179,17 +200,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 5em 0 0.5em;
 }
 
 .future .future__text .title {
-  font-size: 4rem;
+  font-size: 4.1rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1;
+  padding-bottom: 0.5em;
 }
 
 .future .future__text .text {
-  padding-top: 0.7em;
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .future .future__text .form__input {
@@ -211,22 +233,23 @@ body {
   border: 1px solid rgba(91, 97, 110, 0.2);
   border-radius: 6px;
   font-size: 1.2rem;
-  margin-left: -2em;
 }
 
-.future .future__text .form__input button {
+.future .future__text .form__input .future__button {
   background-color: #0052ff;
   border: 1px solid #0052ff;
   border-radius: 8px;
-  padding: 1em 1.3em;
+  padding: 1em 1.5em;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   margin-left: 1em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.future .future__text .form__input button:hover {
-  background-color: #0667d0;
+.future .future__text .form__input .future__button:hover {
+  background-color: #004beb;
 }
 
 .future .future__text .sub-text {
@@ -244,10 +267,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f5f8ff;
+  background-color: #F5F8FF;
 }
 
 .reward__container {
+  max-width: 1000px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,7 +282,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 17em 1em 0em;
+  margin-right: 6em;
+  margin: 0 7em 1em 0;
 }
 
 .reward__container .reward__text {
@@ -267,46 +293,47 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 5em 6em;
-  font-size: 1.5rem;
+  margin: 5em 6em 5em 0;
+  font-size: 1.3rem;
 }
 
-.reward__container .title {
+.reward__container h2 {
   font-size: 4rem;
   font-weight: 400;
-  line-height: 1.2;
-  margin-right: 1.5em;
+  line-height: 1.1;
 }
 
 .reward__container .sub-text {
   font-size: 1.3rem;
-  padding-top: 1em;
+  padding: 1em 0;
+  line-height: 1.3;
 }
 
-.reward__container button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.reward__container .reward__button {
   background-color: #0052ff;
   border: 1px solid #0052ff;
   border-radius: 8px;
-  padding: 1em 1.3em;
+  padding: 1em 1.5em;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
-  margin: 1.5em 29em 0 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.reward__container .reward__button:hover {
+  background-color: #004beb;
 }
 
 .reward__container .reward__img img {
-  max-width: 300px;
-  width: 100%;
+  width: 300px;
 }
 
 .prize {
@@ -326,7 +353,65 @@ body {
   color: #ffffff;
 }
 
-.prize .prize__text {
+.prize .prize__container .prize__text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.4em 2.5em 3em;
+  line-height: 1.2;
+}
+
+.prize .prize__container h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.prize .prize__container .text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-bottom: 1em;
+  line-height: 1.5;
+}
+
+.prize .prize__container .sub-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-bottom: 1em;
+}
+
+.prize .prize__container .prize__button {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  padding: 1em 1.5em;
+  color: #0a0b0d;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prize .prize__container .prize__button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.explore {
+  background-color: #F5F8FF;
+  width: 100%;
+  padding: 5em 1.5em 3em;
+}
+
+.explore .explore__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,18 +421,168 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.explore .explore__container .explore__text {
+  color: #0a0b0d;
+  margin: 0 5em 3.5em 0;
+  line-height: 1.3;
+}
+
+.explore .explore__container .explore__text h2 {
+  font-size: 2.2em;
+  font-weight: 500;
+  padding-bottom: 1em;
+}
+
+.explore .explore__container .explore__text .sub-text {
+  font-size: 1.75em;
+  padding-bottom: 1.7em;
+}
+
+.explore .explore__container .explore__text .explore__button {
+  background-color: #0052ff;
+  border: 1px solid #0052ff;
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.explore .explore__container .explore__text .explore_button:hover {
+  background-color: #004beb;
+}
+
+.explore .explore__container .explore__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.prize .title {
-  margin-right: 11em;
+.explore .explore__container .explore__img .explore__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 1em 1.3em;
 }
 
-.prize button {
-  margin-top: 1em;
-  margin-right: 19em;
+.explore .explore__container .explore__img .explore__nav p {
+  font-size: 0.875em;
+  font-weight: 500;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.explore .explore__container .explore__img .explore__nav .gain {
+  color: #0052ff;
+  padding: 0.7em;
+  border: 1px solid #0052ff;
+  border-radius: 18px;
+}
+
+.explore .explore__container .explore__img img {
+  width: 100%;
+}
+
+.trade .trade__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4.6em 0 7em 4em;
+}
+
+.trade .trade__container img {
+  width: 420px;
+  padding: 0 1.5em;
+}
+
+.trade .trade__container .trade__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1.5em 2em 5em;
+  margin-left: 2.5em;
+}
+
+.trade .trade__container .trade__text .trade__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 0;
+}
+
+.trade .trade__container .trade__text .trade__img .coin_logo {
+  width: 43px;
+  padding: 0;
+}
+
+.trade .trade__container .trade__text .trade__img p {
+  font-size: 1.7em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: .5em;
+}
+
+.trade .trade__container .trade__text h2 {
+  font-size: 2.3em;
+  font-weight: 400;
+  padding-bottom: 1em;
+}
+
+.trade .trade__container .trade__text .text {
+  font-size: 1.1em;
+  padding-bottom: 2em;
+}
+
+.trade .trade__container .trade__text .trade__button {
+  background-color: #0052ff;
+  border: 1px solid #0052ff;
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  height: 56px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.trade .trade__container .trade__text .trade_button:hover {
+  background-color: #004beb;
 }
 /*# sourceMappingURL=style.css.map */
