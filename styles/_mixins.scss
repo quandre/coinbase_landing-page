@@ -1,9 +1,19 @@
 @mixin container_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1180px;
+  max-height: 900px;
   width: 100%;
+  height: 100%;
 }
 
 @mixin container_2 {
-  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1180px;
+  max-height: 700px;
   width: 100%;
+  height: 100%;
 }

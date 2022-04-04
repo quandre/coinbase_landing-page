@@ -3,7 +3,7 @@
 @import "mixins";
 
 .header {
-  position: sticky;
+  position: fixed;
   border-bottom: 1px solid rgba($gray, 0.1);
   width: 100%;
   .header__top {
@@ -12,7 +12,7 @@
     align-items: center;
     height: 37px;
     color: $white;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     background-color: $blue;
     padding-bottom: 2px;
@@ -20,20 +20,20 @@
       cursor: pointer;
       .fa-arrow-right-long {
         margin: 5px 0 0 5px;
-        font-size: 12px;
+        font-size: 0.9rem;
       }
     }
   }
-  .nav {
+  .header__bottom {
     background-color: $white;
-
-    .nav__group {
+    .header__group {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 1220px;
       padding: 0 1.25rem;
       margin: 0 21.4em;
-      .nav__logo {
+      .header__logo {
         .logo {
           max-width: 112px;
           max-height: 20px;
@@ -41,12 +41,10 @@
           height: 100%;
         }
       }
-      .nav__links {
+      .nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 700px;
-        width: 100%;
         font-size: 0.86rem;
         font-weight: 500;
         margin-top: 0.15em;
@@ -62,7 +60,7 @@
         //   box-shadow: 0 2px 5px 0 rgba($black, .1);
         //   width: 100%;
         // }
-        .link a {
+        a {
           color: $black;
           text-decoration: none;
         }
@@ -77,7 +75,7 @@
           justify-content: center;
           align-items: center;
           height: 66px;
-          margin: 0 1.26em;
+          margin: 0 1.6em;
           border-bottom: 4px solid transparent;
         }
       }
@@ -106,7 +104,7 @@
         background-color: $blue;
         border: 1px solid $blue;
         border-radius: 4px;
-        padding: 0.74em 0.887em;
+        padding: 0.7em 1em;
         text-decoration: none;
       }
       .nav__sign-up:hover {
@@ -120,63 +118,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &__container {
+  .future__container {
     @include container_1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    max-width: 650px;
-    width: 100%;
-    margin: 3em 0 3em 0;
-  }
-  .future__text {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 0 5em 0 0.5em;
-    .title {
-      font-size: 4.1rem;
-      font-weight: 400;
-      line-height: 1;
-      padding-bottom: 0.5em;
+    .img {
+      max-width: 640px;
+      width: 100%;
+      margin: 3em 0;
     }
-    .text {
-      font-size: 2em;
-    }
-    .form__input {
+    .future__text {
       display: flex;
       justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin-top: 4em;
-      input {
-        padding: 0.8em 2em;
-        border: 1px solid rgba($gray, 0.2);
-        border-radius: 6px;
-        font-size: 1.2rem;
+      align-items: flex-start;
+      flex-direction: column;
+      line-height: 1.2;
+      padding: 0 1.5em;
+      .title {
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1;
+        width: 100%;
       }
-      .future__button {
-        background-color: $blue;
-        border: 1px solid $blue;
-        border-radius: 8px;
-        padding: 1em 1.5em;
-        color: $white;
-        font-size: 1rem;
-        font-weight: 600;
-        margin-left: 1em;
-        text-decoration: none;
-        cursor: pointer;
+      .text {
+        font-size: 2.25rem;
+        padding-top: 0.5em;
       }
-      .future__button:hover {
-        background-color: $blue--hover;
+      .future__input {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 4em;
+        input {
+          border: 1px solid rgba($gray, 0.2);
+          border-radius: 6px;
+          width: 332px;
+          font-size: 1rem;
+          padding: 1.0625em;
+        }
+        input::placeholder {
+          font-size: 1.2em;
+        }
+        .future__button {
+          background-color: $blue;
+          border: 1px solid $blue;
+          border-radius: 8px;
+          padding: 1em 1.5em;
+          color: $white;
+          font-size: 1rem;
+          font-weight: 600;
+          margin-left: 1em;
+          text-decoration: none;
+          user-select: none;
+          cursor: pointer;
+        }
+        .future__button:hover {
+          background-color: $blue--hover;
+        }
       }
-    }
-    .sub-text {
-      font-size: 1.3rem;
-      margin-top: 1em;
+      .sub-text {
+        font-size: 1.3rem;
+        margin-top: 1.4em;
+      }
     }
   }
 }
@@ -186,47 +187,58 @@
   justify-content: center;
   align-items: center;
   background-color: $gray--background;
-  &__container {
-    @include container_2;
+  .reward__container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-right: 6em;
-    margin: 0 7em 1em 0;
+    max-width: 1360px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+    padding: 5em 0;
+    // margin-right: 6em;
+    // margin: 0 7em 1em 0;
     .reward__text {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
-      margin: 5em 6em 5em 0;
-      font-size: 1.3rem;
+      width: 816px;
+      padding: 2.1em;
+      margin: 0 2em 0 4em;
+      font-size: 1.2rem;
+      h2 {
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1.1;
+      }
+      .sub-text {
+        font-size: 1.3rem;
+        padding: 1em 0;
+        line-height: 1.3;
+      }
+      .reward__button {
+        background-color: $blue;
+        border: 1px solid $blue;
+        border-radius: 8px;
+        padding: 1em 1.5em;
+        color: $white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+      }
+      .reward__button:hover {
+        background-color: $blue--hover;
+      }
     }
-    h2 {
-      font-size: 4rem;
-      font-weight: 400;
-      line-height: 1.1;
-    }
-    .sub-text {
-      font-size: 1.3rem;
-      padding: 1em 0;
-      line-height: 1.3;
-    }
-    .reward__button {
-      background-color: $blue;
-      border: 1px solid $blue;
-      border-radius: 8px;
-      padding: 1em 1.5em;
-      color: $white;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .reward__button:hover {
-      background-color: $blue--hover;
-    }
-    .reward__img img {
-      width: 300px;
+
+    .reward__img {
+      width: 544px;
+      img {
+        width: 300px;
+      }
     }
   }
 }
@@ -243,60 +255,67 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      padding: 0.4em 2.5em 3em;
-      line-height: 1.2;
+      padding: 2em;
+      // line-height: 1.2;
+      h2 {
+        font-size: 2.3rem;
+        font-weight: 400;
+      }
+      .text {
+        font-size: 1.1rem;
+        font-weight: 400;
+        padding-bottom: 1em;
+        line-height: 1.5;
+      }
+      .sub-text {
+        font-size: 0.8rem;
+        font-weight: 400;
+        padding-bottom: 1.5em;
+      }
+      .prize__button {
+        background-color: $white;
+        border-radius: 8px;
+        border: none;
+        padding: 1em 1.5em;
+        color: $black;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-bottom: 1em;
+        user-select: none;
+        cursor: pointer;
+      }
+      .prize__button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
     }
-    h2 {
-      font-size: 2.3rem;
-      font-weight: 400;
-    }
-    .text {
-      font-size: 1.1rem;
-      font-weight: 400;
-      padding-bottom: 1em;
-      line-height: 1.5;
-    }
-    .sub-text {
-      font-size: 0.8rem;
-      font-weight: 400;
-      padding-bottom: 1em;
-    }
-    .prize__button {
-      background-color: $white;
-      border-radius: 8px;
-      border: none;
-      padding: 1em 1.5em;
-      color: $black;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .prize__button:hover {
-      background-color: rgba(255, 255, 255, 0.9);
+    img {
+      max-width: 767px;
+      width: 100%;
     }
   }
 }
 
 .explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $gray--background;
   width: 100%;
-  padding: 5em 1.5em 3em;
+  padding: 5em 1.5em;
   .explore__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include container_2;
     .explore__text {
       color: $black;
-      margin: 0 5em 3.5em 0;
+      margin: 0 9em 3.5em 0;
       line-height: 1.3;
       h2 {
-        font-size: 2.2em;
-        font-weight: 500;
+        font-size: 2.125rem;
+        font-weight: 400;
         padding-bottom: 1em;
       }
       .sub-text {
-        font-size: 1.75em;
+        font-size: 1.5rem;
         padding-bottom: 1.7em;
       }
       .explore__button {
@@ -308,6 +327,7 @@
         font-size: 1rem;
         font-weight: 500;
         text-decoration: none;
+        user-select: none;
         cursor: pointer;
       }
       .explore_button:hover {
@@ -323,7 +343,7 @@
         align-items: center;
         padding: 0 0 1em 1.3em;
         p {
-          font-size: 0.875em;
+          font-size: 0.875rem;
           font-weight: 500;
           padding: 1em;
           cursor: pointer;
@@ -342,62 +362,385 @@
   }
 }
 
-.trade {
-  .trade__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4.6em 0 7em 4em;
-    img {
-      width: 420px;
-      padding: 0 1.5em;
-    }
-    .trade__text {
+.trade,
+.wallet,
+.card,
+.institutional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .trade__container,
+  .wallet__container,
+  .card__container,
+  .institutional__container {
+    @include container_1;
+    padding: 4em 0 5.5em 0;
+    .trade__img,
+    .wallet__img,
+    .card__img,
+    .institutional__img {
       display: flex;
       justify-content: center;
+      align-items: center;
+      width: 531px;
+      img {
+        width: 373px;
+      }
+    }
+    .trade__text-box,
+    .wallet__text-box,
+    .card__text-box,
+    .institutional__text-box {
+      display: flex;
+      justify-content: space-between;
       align-items: flex-start;
       flex-direction: column;
-      padding: 0 1.5em 2em 5em;
-      margin-left: 2.5em;
-      .trade__img {
+      padding: 0 1.5em 2em 4em;
+      //margin-left: 4em;
+      .trade__mini-img,
+      .wallet__mini-img,
+      .card__mini-img,
+      .institutional__mini-img {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 2em 0;
         .coin_logo {
-          width: 43px;
+          width: 42px;
           padding: 0;
         }
         p {
-          font-size: 1.7em;
+          font-size: 1.75rem;
           font-weight: 500;
           text-transform: uppercase;
-          margin-left: .5em;
+          margin-left: 0.4em;
         }
       }
+      .trade__text,
+      .wallet__text,
+      .card__text,
+      .institutional__text {
+        width: 649px;
+        h2 {
+          font-size: 2.3rem;
+          font-weight: 400;
+          padding-bottom: 1em;
+        }
+        .text {
+          font-size: 1rem;
+          padding-bottom: 3em;
+          line-height: 1.5;
+        }
+        .trade__button,
+        .wallet__button,
+        .card__button,
+        .institutional__button {
+          background-color: $blue;
+          border: 1px solid $blue;
+          border-radius: 8px;
+          padding: 1em 1.5em;
+          color: $white;
+          height: 56px;
+          font-size: 1rem;
+          font-weight: 500;
+          text-decoration: none;
+          user-select: none;
+          cursor: pointer;
+        }
+        .trade_button:hover,
+        .wallet_button:hover,
+        .card_button:hover,
+        .institutional_button:hover {
+          background-color: $blue--hover;
+        }
+      }
+    }
+  }
+}
+
+.misc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 2em;
+  background-color: $gray--background;
+  .misc__earn,
+  .misc__learn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border: 1px solid rgba($gray, 0.2);
+    border-radius: 18px;
+    margin: 0 1.3em;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
+    a {
+      text-decoration: none;
+    }
+    .earn__img,
+    .learn__img {
+      img {
+        width: 498px;
+        height: 277px;
+        object-fit: cover;
+        border-radius: 18px 18px 0 0;
+      }
+    }
+    .earn__text-box,
+    .learn__text-box {
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        padding: 1.5em 1.5em 0;
+      }
+      p {
+        color: $gray;
+        font-size: 0.98rem;
+        padding: 0.8em 1.7em 2em;
+        line-height: 1.7;
+      }
+    }
+    .earn__more,
+    .learn__more {
+      p {
+        color: $blue;
+        text-align: center;
+        padding: 1.5em 0;
+        border-top: 1px solid rgba($gray, 0.2);
+      }
+    }
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  .about__container {
+    @include container_1;
+    .about__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 1.5em 1.5em 1.5em 0;
+      height: 100%;
+      width: 590px;
       h2 {
-        font-size: 2.3em;
+        font-size: 2.125rem;
         font-weight: 400;
-        padding-bottom: 1em;
+        line-height: 1.1;
+        margin: 1em 0 0.9em 0;
       }
-      .text {
-        font-size: 1.1em;
-        padding-bottom: 2em;
+      .sub-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 1em 0;
       }
-      .trade__button {
+      .about__button {
+        position: relative;
+        right: 125px;
         background-color: $blue;
         border: 1px solid $blue;
         border-radius: 8px;
         padding: 1em 1.5em;
         color: $white;
-        height: 56px;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 600;
         text-decoration: none;
+        user-select: none;
         cursor: pointer;
       }
-      .trade_button:hover {
+      .about__button:hover {
         background-color: $blue--hover;
+      }
+    }
+
+    .about__img {
+      display: flex;
+      width: 590px;
+      height: 900px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .start__container {
+    @include container_2;
+    padding: 2.5em 0;
+    .start__logo {
+      padding: 4.5em 5em 4em;
+      .logo {
+        max-width: 478px;
+        height: 434px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .start__text {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 542px;
+      line-height: 1.2;
+      padding: 0 1.5em 0 2.5em;
+      .title {
+        font-size: 1.75rem;
+      }
+      .text {
+        font-size: 4.3rem;
+        font-weight: 400;
+        line-height: 1;
+        padding: 0.25em 0 0.625em;
+        span {
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+      .start__input {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        input {
+          border: 1px solid rgba($gray, 0.2);
+          border-radius: 6px;
+          width: 332px;
+          font-size: 1rem;
+          padding: 1.0625em;
+        }
+        input::placeholder {
+          font-size: 1.2em;
+        }
+        .start__button {
+          background-color: $blue;
+          border: 1px solid $blue;
+          border-radius: 8px;
+          padding: 1em 1.5em;
+          color: $white;
+          font-size: 1rem;
+          font-weight: 600;
+          margin-left: 1em;
+          text-decoration: none;
+          user-select: none;
+          cursor: pointer;
+        }
+        .start__button:hover {
+          background-color: $blue--hover;
+        }
+      }
+    }
+  }
+}
+
+.terms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba($gray, 0.2);
+  .text {
+    width: 1180px;
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    color: $gray;
+    padding: 0 1.5em;
+    span {
+      color: $blue;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .footer__container {
+    @include container_1;
+    padding: 6.25em 1.5em;
+    .col__1 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0.25em;
+      width: 377px;
+      height: 650px;
+      .footer__logo {
+        padding-bottom: 2em;
+        img {
+          width: 112px;
+        }
+      }
+      .lang__selecter {
+        padding: 0.25em;
+        margin-bottom: 1.6em;
+        border: 1px solid rgba($gray, 0.2);
+      }
+      .footer__copyright {
+        font-size: 1rem;
+        color: $footer--text;
+        padding: 0.5em 0;
+      }
+      .footer__social-links a {
+        font-size: 1rem;
+        color: $footer--text;
+        text-decoration: none;
+      }
+      .footer__social-links a:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+    .col__2,
+    .col__3,
+    .col__4 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0.25em;
+      width: 251px;
+      height: 680px;
+      .col__2-1,
+      .col__2-2,
+      .col__3-1,
+      .col__3-2,
+      .col__3-3 {
+        padding-bottom: 1.875em;
+      }
+      .col__2-1,
+      .col__2-2,
+      .col__3-1,
+      .col__3-2,
+      .col__3-3,
+      .col__4-1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 1rem;
+        line-height: 1.8;
+        h2 {
+          font-size: 1rem;
+          color: $black;
+        }
+        a {
+          color: $footer--text;
+        }
+        a:hover {
+          color: $blue;
+          text-decoration: underline;
+        }
       }
     }
   }

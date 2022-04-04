@@ -19,27 +19,31 @@
       <p class="text">Sign up and get crypto<i class="fa-solid fa-arrow-right-long"></i></p>
     </div>
 
-    <nav class="nav">
-      <div class="nav__group">
-        <div class="nav__logo">
+    <div class="header__bottom">
+      <div class="header__group">
+        <div class="header__logo">
           <a href="https://www.coinbase.com/"><img
               src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg"
               alt="" class="logo"></a>
         </div>
 
-        <div class="nav__links">
+        <nav class="nav">
 
-          <span class="nav__link link">
-            <a href="https://www.coinbase.com/price">
-              prices
-            </a>
-          </span>
 
-          <span class="nav__link link">
-            <a href="https://www.coinbase.com/learn">
-              learn
-            </a>
-          </span>
+          <a href="https://www.coinbase.com/price">
+            <div class="nav__link link">
+              <span>prices</span>
+            </div>
+          </a>
+
+
+
+          <a href="https://www.coinbase.com/learn">
+            <div class="nav__link link">
+              <span>learn</span>
+            </div>
+          </a>
+
           <!-- <div class="dropdown__menu">
           <div class="menu__col-one">
             <a href="https://www.coinbase.com/learn/tips-and-tutorials"><i class="fa-solid fa-angle-right"></i>
@@ -70,14 +74,14 @@
           </div>
         </div> -->
 
-          <span class="nav__link non-link">individuals</span>
+          <div class="nav__link non-link">individuals</div>
 
-          <span class="nav__link non-link">businesses</span>
+          <div class="nav__link non-link">businesses</div>
 
-          <span class="nav__link non-link">developers</span>
+          <div class="nav__link non-link">developers</div>
 
-          <span class="nav__link non-link">company</span>
-        </div>
+          <div class="nav__link non-link">company</div>
+        </nav>
 
         <div class="nav__sign-in-up">
 
@@ -92,15 +96,15 @@
 
         </div>
       </div>
-    </nav>
+    </div>
   </header>
 
 
   <main>
     <section class="future">
       <div class="future__container">
-        <div class="future__logo">
-          <img src="img/freeMoney.png" alt="" class="logo">
+        <div class="future__img">
+          <img src="img/freeMoney.png" alt="" class="img">
         </div>
 
         <div class="future__text">
@@ -113,7 +117,7 @@
             businesses trust us to buy, sell, <br>
             and manage crypto.
           </span>
-          <div class="form__input">
+          <div class="future__input">
             <input type="email" placeholder="satoshi@nakamoto.com">
             <a class="future__button" href="#">
               <span>Sign Up</span>
@@ -135,7 +139,7 @@
             Coinbase
           </h2>
           <p class="sub-text">
-            On average, users who sign up for Coinbase can earn up to $120
+            On average, users who sign up for Coinbase can earn up to $120 <br>
             just by taking advantage of our rewards.³
           </p>
           <a class="reward__button" href="https://www.coinbase.com/rewards">
@@ -200,26 +204,339 @@
 
     <section class="trade">
       <div class="trade__container">
-        <img src="img/trade.png" alt="">
-        <div class="trade__text">
-          <div class="trade__img">
+        <div class="trade__img">
+          <img src="img/trade.png" alt="">
+        </div>
+        <div class="trade__text-box">
+          <div class="trade__mini-img">
             <img class="coin_logo" src="img/coin_logo.png" alt="">
             <p>trade</p>
           </div>
-          <h2>
-            Buy, sell, and store hundreds of <br> 
-            cryptocurrencies
-          </h2>
-          <p class="text">
-            From Bitcoin to Dogecoin, we make it easy to buy and sell cryptocurrency. <br>
-            Protect your crypto with best in class cold storage.
-          </p>
-          <a class="trade__button" href="https://www.coinbase.com/price">
-            <span>Sign up now</span>
-          </a>
+          <div class="trade__text">
+            <h2>
+              Buy, sell, and store hundreds of <br>
+              cryptocurrencies
+            </h2>
+            <p class="text">
+              From Bitcoin to Dogecoin, we make it easy to buy and sell cryptocurrency. <br>
+              Protect your crypto with best in class cold storage.
+            </p>
+            <button class="trade__button" href="https://www.coinbase.com/signup">
+              <span>Sign up now</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="wallet">
+      <div class="wallet__container">
+        <div class="wallet__img">
+          <img src="img/Wallet.png" alt="">
+        </div>
+        <div class="wallet__text-box">
+          <div class="wallet__mini-img">
+            <img class="coin_logo" src="img/coin_logo.png" alt="">
+            <p>wallet</p>
+          </div>
+          <div class="wallet__text">
+            <h2>
+              Buy, sell, and store hundreds of <br>
+              cryptocurrencies
+            </h2>
+            <p class="text">
+              From Bitcoin to Dogecoin, we make it easy to buy and sell cryptocurrency. <br>
+              Protect your crypto with best in class cold storage.
+            </p>
+            <button class="wallet__button" href="https://www.coinbase.com/wallet">
+              <span>Sign up now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card__container">
+        <div class="card__img">
+          <img src="img/card.png" alt="">
+        </div>
+        <div class="card__text-box">
+          <div class="card__mini-img">
+            <img class="coin_logo" src="img/coin_logo.png" alt="">
+            <p>card</p>
+          </div>
+          <div class="card__text">
+            <h2>
+              Earn crypto rewards with our <br>
+              Visa™ debit card¹
+            </h2>
+            <p class="text">
+              Your daily coffee and weekly grocery run can now earn you up to 4% back <br>
+              in a crypto reward of your choice when you use Coinbase Card.
+            </p>
+            <button class="card__button" href="https://www.coinbase.com/card">
+              <span>Get your Card</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="institutional">
+      <div class="institutional__container">
+        <div class="institutional__img">
+          <img src="img/institutional.png" alt="">
+        </div>
+        <div class="institutional__text-box">
+          <div class="institutional__mini-img">
+            <img class="coin_logo" src="img/coin_logo.png" alt="">
+            <p>institutional</p>
+          </div>
+          <div class="institutional__text">
+            <h2>
+              The financial institution for a <br>
+              digital asset future
+            </h2>
+            <p class="text">
+              Coinbase Institutional is the first choice for sophisticated investors and <br>
+              institutions that want to invest in digital assets
+            </p>
+            <button class="institutional__button" href="https://www.coinbase.com/institutional">
+              <span>Learn more</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="misc">
+      <div class="misc__earn">
+        <a href="https://www.coinbase.com/earn">
+          <div class="earn__img">
+            <img src="img/earn.png" alt="">
+          </div>
+          <div class="earn__text-box">
+            <h3>Earn crypto</h3>
+            <p>
+              Start earning crypto just for learning about how specific <br>
+              cryptocurrencies work.²
+            </p>
+          </div>
+          <div class="earn__more">
+            <p>Earn more</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="misc__learn">
+        <a href="https://www.coinbase.com/earn">
+          <div class="learn__img">
+            <img src="img/learn.png" alt="">
+          </div>
+          <div class="learn__text-box">
+            <h3>Learn the basics</h3>
+            <p>
+              Explore beginner guides, practical tutorials, and market updates <br>
+              on Bitcoin, Ethereum and more.
+            </p>
+          </div>
+          <div class="learn__more">
+            <p>Learn more</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__container">
+        <div class="about__text">
+          <h2>
+            The freedom of crypto for <br>
+            everyone, everywhere
+          </h2>
+          <p class="sub-text">
+            We're committed to creating more economic freedom <br>
+            through accessible, safe, and secure financial tools for <br>
+            everyone.
+          </p>
+          <button class="about__button" href="https://www.coinbase.com/about">
+            <span>Learn more</span>
+          </button>
+        </div>
+        <div class="about__img">
+          <img src="img/tools.jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="start">
+      <div class="start__container">
+        <div class="start__logo">
+          <img src="img/Type_Circles_4x.png" alt="" class="logo">
+        </div>
+        <div class="start__text">
+          <p class="title">
+            Take control of your money
+          </p>
+          <h1 class="text">
+            Start your <br>
+            portfolio today <br>
+            and <span>get crypto</span>
+          </h1>
+          <div class="start__input">
+            <input type="email" placeholder="satoshi@nakamoto.com">
+            <button class="start__button" href="#">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="terms">
+      <div class="text">
+        <p>
+          <span>* Terms apply.</span> After you make your first cryptocurrency purchase, BTC will be added to your
+          portfolio. Limited time offer. U.S. only (excluding Hawaii). Offer available to new users who <br>
+          have not previously created an account. Offer not available to new users who were referred to Coinbase
+          through the Referral Program or who have previously opened an account using <br>
+          different contact information. Coinbase may update the conditions for eligibility at any time.
+        </p>
+
+        <br>
+
+        <p>¹Crypto rewards is an optional Coinbase offer.</p>
+
+        <br>
+
+        <p>
+          ²Limited while supplies last and amounts offered for each quiz may vary. Must verify ID to be eligible and
+          complete quiz to earn. Users may only earn once per quiz. Coinbase reserves <br>
+          the right to cancel the Earn offer
+          at any time.
+        </p>
+
+        <br>
+
+        <p>³Sum of median rewards earned per user in Q4 2021 across multiple Coinbase rewards programs (excluding
+          sweepstakes)
+        </p>
+
+        <br>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="col__1">
+          <div class="footer__logo">
+            <img
+              src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg"
+              alt="">
+          </div>
+          <select name="lang" id="lang" class="lang__selecter">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="es">Español - España</option>
+            <option value="es-LA">Español - América Latina</option>
+            <option value="fr">Français - France</option>
+            <option value="ja">日本語</option>
+            <option value="it">Italiano</option>
+            <option value="pl">Polski</option>
+            <option value="pt">Português - Brasil</option>
+            <option value="pt-PT">Português - Portugal</option>
+            <option value="ru">Pyccкий</option>
+            <option value="th">ไทย</option>
+            <option value="tr">Türkçe</option>
+          </select>
+          <p class="footer__copyright">&copy 2022 Coinbase</p>
+          <div class="footer__social-links">
+            <a href="https://blog.coinbase.com/">Blog</a>
+            <span>&#8226</span>
+            <a href="https://twitter.com/coinbase">Twitter</a>
+            <span>&#8226</span>
+            <a href="https://www.facebook.com/Coinbase">Facebook</a>
+          </div>
+        </div>
+        <div class="col__2">
+          <div class="col__2-1">
+            <h2>Company</h2>
+            <a href="https://www.coinbase.com/about">About</a>
+            <a href="https://www.coinbase.com/careers">Careers</a>
+            <a href="https://www.coinbase.com/affiliates">Affiliates</a>
+            <a href="https://blog.coinbase.com/">Blog</a>
+            <a href="https://www.coinbase.com/press">Press</a>
+            <a href="https://investor.coinbase.com/">Investors</a>
+            <a href="https://www.coinbase.com/legal/user_agreement">Legal & privacy</a>
+            <a href="https://www.coinbase.com/legal/cookie">Cookie policy</a>
+            <a href="#">Cookie preferences</a>
+          </div>
+          <div class="col__2-2">
+            <h2>Learn</h2>
+            <a href="https://www.coinbase.com/browse">Browse crypto prices</a>
+            <a href="https://www.coinbase.com/bytes">Coinbase Bytes newsletter</a>
+            <a href="https://www.coinbase.com/learn/crypto-basics">Crypto basics</a>
+            <a href="https://www.coinbase.com/learn/tips-and-tutorials">Tips & tutorials</a>
+            <a href="https://www.coinbase.com/learn/market-updates">Market updates</a>
+            <a href="https://www.coinbase.com/learn/crypto-basics/what-is-bitcoin">What is Bitcoin?</a>
+            <a href="https://www.coinbase.com/learn/crypto-basics/what-is-cryptocurrency">What is crypto?</a>
+            <a href="https://www.coinbase.com/learn/crypto-basics/what-is-a-blockchain">What is a blockchain?</a>
+            <a href="https://www.coinbase.com/learn/tips-and-tutorials/how-to-set-up-a-crypto-wallet">How to set up a
+              crypto wallet</a>
+            <a href="https://www.coinbase.com/learn/tips-and-tutorials/how-to-send-crypto">How to send crypto</a>
+            <a href="https://www.coinbase.com/learn/crypto-basics/understanding-crypto-taxes">Taxes</a>
+          </div>
+        </div>
+        <div class="col__3">
+          <div class="col__3-1">
+            <h2>Individuals</h2>
+            <a href="https://www.coinbase.com/dashboard">Buy & sell</a>
+            <a href="https://www.coinbase.com/earn">Earn free crypto</a>
+            <a href="https://wallet.coinbase.com/">Wallet</a>
+            <a href="https://www.coinbase.com/card">Card</a>
+          </div>
+          <div class="col__3-2">
+            <h2>Businesses</h2>
+            <a href="https://www.coinbase.com/institutional">Institutional</a>
+            <a href="https://www.coinbase.com/prime">Prime</a>
+            <a href="https://custody.coinbase.com/">Custody</a>
+            <a href="https://assethub.coinbase.com/">Asset Hub</a>
+            <a href="https://commerce.coinbase.com/">Commerce</a>
+          </div>
+          <div class="col__3-3">
+            <h2>Developers</h2>
+            <a href="https://www.coinbase.com/cloud">Cloud</a>
+            <a href="https://docs.cloud.coinbase.com/wallet-sdk/docs">Wallet SDK</a>
+            <a href="https://www.coinbase.com/cloud/blockchain-infrastructure/query-and-transact">Query & Transact</a>
+            <a href="https://docs.cloud.coinbase.com/commerce/docs">Commerce</a>
+            <a href="https://docs.cloud.coinbase.com/exchange/docs">Exchange & Pro</a>
+            <a href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs">Sign in with Coinbase</a>
+            <a href="https://docs.cloud.coinbase.com/rosetta/docs">Rosetta</a>
+            <a href="https://www.coinbase.com/cloud/blockchain-infrastructure/participate">Participate</a>
+            <a href="https://docs.cloud.coinbase.com/prime/docs">Prime API</a>
+          </div>
+        </div>
+        <div class="col__4">
+          <div class="col__4-1">
+            <h2>Support</h2>
+            <a href="https://help.coinbase.com/en">Help center</a>
+            <a href="https://help.coinbase.com/en/contact-us/">Contact us</a>
+            <a
+              href="https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/create-a-coinbase-account/">Create
+              account</a>
+            <a href="https://help.coinbase.com/en/coinbase/managing-my-account#identity-verification/">ID
+              verification</a>
+            <a href="https://help.coinbase.com/en/coinbase/managing-my-account/">Account information</a>
+            <a href="https://help.coinbase.com/en/coinbase/getting-started#add-a-payment-method/">Payment methods</a>
+            <a href="https://help.coinbase.com/en/coinbase/managing-my-account/">Account access</a>
+            <a href="https://help.coinbase.com/en/supported-crypto.html">Supported crypto</a>
+            <a href="https://www.coinbase.com/places/">Supported countries</a>
+            <a href="https://status.coinbase.com/">Status</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 
