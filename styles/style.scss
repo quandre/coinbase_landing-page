@@ -3,7 +3,6 @@
 @import "mixins";
 
 .header {
-  position: fixed;
   border-bottom: 1px solid rgba($gray, 0.1);
   width: 100%;
   .header__top {
@@ -12,7 +11,7 @@
     align-items: center;
     height: 37px;
     color: $white;
-    font-size: 1.05rem;
+    font-size: 1.09rem;
     font-weight: 500;
     background-color: $blue;
     padding-bottom: 2px;
@@ -30,7 +29,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 1220px;
+      max-width: 1220px;
       padding: 0 1.25rem;
       margin: 0 21.4em;
       .header__logo {
@@ -50,22 +49,9 @@
         margin-top: 0.15em;
         margin-left: 2em;
         text-transform: capitalize;
-        // .dropdown__menu {
-        //   display: flex;
-        //   justify-content: space-around;
-        //   align-items: center;
-        //   position: absolute;
-        //   top: calc( 100% + .25rem);
-        //   background-color: $white;
-        //   box-shadow: 0 2px 5px 0 rgba($black, .1);
-        //   width: 100%;
-        // }
         a {
           color: $black;
           text-decoration: none;
-        }
-        .link {
-          cursor: pointer;
         }
         .non-link {
           cursor: context-menu;
@@ -77,9 +63,75 @@
           height: 66px;
           margin: 0 1.6em;
           border-bottom: 4px solid transparent;
+          cursor: pointer;
+        }
+        .learn__dropdown-menu {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 6.6rem;
+          left: 0;
+          width: 100%;
+          background-color: $white;
+          box-shadow: 0 2px 4px 0 rgba($gray, 0.1);
+          padding: 3em;
+          z-index: 1;
+          .menu__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1065px;
+            .menu__col-one a {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-direction: row;
+              font-size: 1rem;
+              font-weight: 500;
+              width: 150px;
+              color: rgb(5, 15, 25);
+              line-height: 2.2;
+              margin-right: 4em;
+              .fa-angle-right {
+                margin-right: 1.5em;
+              }
+            }
+            .menu__col-two {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              flex-direction: column;
+              width: 320px;
+              margin: 0 1em 1.1em 0;
+              .learn__dropdown-box {
+                h3 {
+                  font-size: 1rem;
+                  font-weight: 500;
+                }
+                p {
+                  font-size: 1rem;
+                  font-weight: 400;
+                  padding: 0.7em 0;
+                }
+                a span {
+                  display: block;
+                  color: $blue;
+                  font-size: 1rem;
+                  padding-top: 0.3em;
+                }
+                a span:hover {
+                  color: $blue--hover2;
+                }
+              }
+            }
+          }
+          .menu__container a:hover {
+            color: $blue--hover2;
+          }
         }
       }
-      .nav__links span:hover {
+      .nav__link:hover {
         border-bottom: 4px solid $blue--hover;
       }
     }
