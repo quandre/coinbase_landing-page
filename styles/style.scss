@@ -65,7 +65,11 @@
           border-bottom: 4px solid transparent;
           cursor: pointer;
         }
-        .learn__dropdown-menu {
+        .learn__dropdown-menu,
+        .individuals__dropdown-menu,
+        .businesses__dropdown-menu,
+        .developers__dropdown-menu,
+        .company__dropdown-menu {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -75,59 +79,96 @@
           width: 100%;
           background-color: $white;
           box-shadow: 0 2px 4px 0 rgba($gray, 0.1);
-          padding: 3em;
+          padding: 2.4em;
           z-index: 1;
           .menu__container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             width: 1065px;
-            .menu__col-one a {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              flex-direction: row;
-              font-size: 1rem;
-              font-weight: 500;
-              width: 150px;
-              color: rgb(5, 15, 25);
-              line-height: 2.2;
-              margin-right: 4em;
-              .fa-angle-right {
-                margin-right: 1.5em;
+            .menu__col-one {
+              a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                font-size: 1rem;
+                color: rgb(5, 15, 25);
+                line-height: 2.2;
+                .fa-angle-right {
+                  margin-right: 1.5em;
+                }
+                h4 {
+                  font-weight: 500;
+                  width: 150px;
+                }
+              }
+            }
+            .menu__col-one-two {
+              margin-right: 1em;
+              .menu__col-group {
+                font-size: 1rem;
+                line-height: 2;
+                padding: 0.5em 0;
+                a {
+                  display: flex;
+                  flex-direction: row;
+                  line-height: 1;
+                  .col__img {
+                    img {
+                      width: 40px;
+                      height: 40px;
+                      margin-right: 1em;
+                    }
+                  }
+                  .col__text {
+                    h4 {
+                      font-size: 1rem;
+                      font-weight: 500;
+                      width: 150px;
+                    }
+                    p {
+                      color: rgba($gray--nav-text, 0.6);
+                    }
+                  }
+                }
               }
             }
             .menu__col-two {
               display: flex;
               justify-content: center;
-              align-items: flex-start;
+              align-items: center;
               flex-direction: column;
               width: 320px;
-              margin: 0 1em 1.1em 0;
-              .learn__dropdown-box {
-                h3 {
+              margin: 0.5em 1.2em 1.1em 0;
+              .learn__dropdown-box,
+              .individuals__dropdown-box,
+              .businesses__dropdown-box,
+              .developers__dropdown-box,
+              .company__dropdown-box {
+                h4 {
                   font-size: 1rem;
                   font-weight: 500;
                 }
                 p {
                   font-size: 1rem;
                   font-weight: 400;
-                  padding: 0.7em 0;
+                  padding: 0.7em 0 1em 0;
                 }
                 a span {
                   display: block;
                   color: $blue;
                   font-size: 1rem;
-                  padding-top: 0.3em;
+                  padding-top: 0.6em;
                 }
                 a span:hover {
-                  color: $blue--hover2;
+                  color: $blue--nav-hover2;
                 }
               }
             }
           }
           .menu__container a:hover {
-            color: $blue--hover2;
+            color: $blue--nav-hover2;
           }
         }
       }

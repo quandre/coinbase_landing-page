@@ -109,7 +109,11 @@ body {
   cursor: pointer;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu {
+.header .header__bottom .header__group .nav .learn__dropdown-menu,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu,
+.header .header__bottom .header__group .nav .developers__dropdown-menu,
+.header .header__bottom .header__group .nav .company__dropdown-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,50 +130,15 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 4px 0 rgba(91, 97, 110, 0.1);
           box-shadow: 0 2px 4px 0 rgba(91, 97, 110, 0.1);
-  padding: 3em;
+  padding: 2.4em;
   z-index: 1;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 1065px;
-}
-
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 1rem;
-  font-weight: 500;
-  width: 150px;
-  color: #050f19;
-  line-height: 2.2;
-  margin-right: 4em;
-}
-
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one a .fa-angle-right {
-  margin-right: 1.5em;
-}
-
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two {
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,37 +148,255 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 1065px;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one a,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one a,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one a,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one a,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+  color: #050f19;
+  line-height: 2.2;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one a .fa-angle-right,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one a .fa-angle-right,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one a .fa-angle-right,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one a .fa-angle-right,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one a .fa-angle-right {
+  margin-right: 1.5em;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one a h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one a h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one a h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one a h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one a h4 {
+  font-weight: 500;
+  width: 150px;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two {
+  margin-right: 1em;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 0.5em 0;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 1;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1em;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 150px;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p {
+  color: rgba(17, 51, 83, 0.6);
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 320px;
-  margin: 0 1em 1.1em 0;
+  margin: 0.5em 1.2em 1.1em 0;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h3 {
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h4,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box h4,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box h4,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box h4,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .company__dropdown-box h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .company__dropdown-box h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .company__dropdown-box h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .company__dropdown-box h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .company__dropdown-box h4 {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box p {
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box p,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box p,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box p,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box p,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .company__dropdown-box p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .company__dropdown-box p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .company__dropdown-box p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .company__dropdown-box p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .company__dropdown-box p {
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.7em 0;
+  padding: 0.7em 0 1em 0;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span {
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span {
   display: block;
   color: #0052ff;
   font-size: 1rem;
-  padding-top: 0.3em;
+  padding-top: 0.6em;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span:hover {
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .individuals__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .businesses__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .developers__dropdown-box a span:hover,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-two .company__dropdown-box a span:hover {
   color: #0667d0;
 }
 
-.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container a:hover {
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container a:hover,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container a:hover,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container a:hover,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container a:hover,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container a:hover {
   color: #0667d0;
 }
 
