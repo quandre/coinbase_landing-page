@@ -49,9 +49,6 @@
           color: $black;
           text-decoration: none;
         }
-        .non-link {
-          cursor: context-menu;
-        }
         .nav__link {
           display: flex;
           justify-content: center;
@@ -59,127 +56,144 @@
           height: 66px;
           margin: 0 1.3em;
           border-bottom: 4px solid transparent;
-          cursor: pointer;
         }
-        .learn__dropdown-menu,
-        .individuals__dropdown-menu,
-        .businesses__dropdown-menu,
-        .developers__dropdown-menu,
-        .company__dropdown-menu {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          top: 6.6rem;
-          left: 0;
-          width: 100%;
-          background-color: $white;
-          box-shadow: 0 2px 4px 0 rgba($gray, 0.1);
-          padding: 2.4em;
-          z-index: 1;
-          .menu__container {
+        .non-link {
+          cursor: context-menu;
+        }
+        .learn__dropdown,
+        .individuals__dropdown,
+        .businesses__dropdown,
+        .developers__dropdown,
+        .company__dropdown {
+          .learn__dropdown-menu,
+          .individuals__dropdown-menu,
+          .businesses__dropdown-menu,
+          .developers__dropdown-menu,
+          .company__dropdown-menu {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            width: 1065px;
-            .menu__col-one {
-              a {
+            align-items: center;
+            position: absolute;
+            top: 103px;
+            left: 0;
+            width: 100%;
+            background-color: $white;
+            box-shadow: 0 2px 4px 0 rgba($gray, 0.1);
+            padding: 2.4em;
+            z-index: 1;
+            visibility: hidden;
+            transition: visibility .2s ease-in-out;
+            .menu__container {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              width: 1065px;
+              .menu__col-one {
+                a {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: row;
+                  font-size: 1rem;
+                  color: rgb(5, 15, 25);
+                  line-height: 2.2;
+                  .fa-angle-right {
+                    margin-right: 1.5em;
+                  }
+                  h4 {
+                    font-weight: 500;
+                    width: 150px;
+                  }
+                }
+              }
+              .menu__col-one-two {
+                margin-right: 2em;
+                .menu__col-group {
+                  font-size: 1rem;
+                  line-height: 2;
+                  padding: 0.5em 0;
+                  a {
+                    display: flex;
+                    flex-direction: row;
+                    line-height: 1;
+                    .col__img {
+                      img {
+                        text-align: center;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 1em;
+                        border-radius: 50%;
+                        box-shadow: 0 4px 6px 1px rgba(91, 97, 110, 0.3);
+                      }
+                    }
+                    .col__text {
+                      line-height: 1.35;
+                      h4 {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        width: 150px;
+                      }
+
+                      p {
+                        color: rgba($gray--nav-text, 0.6);
+                        font-weight: 400;
+                      }
+                    }
+                  }
+                }
+                .menu__col-group a:hover {
+                  h4 {
+                    color: $blue--hover;
+                  }
+                  p {
+                    color: $black;
+                  }
+                }
+              }
+              .menu__col-two {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: row;
-                font-size: 1rem;
-                color: rgb(5, 15, 25);
-                line-height: 2.2;
-                .fa-angle-right {
-                  margin-right: 1.5em;
-                }
-                h4 {
-                  font-weight: 500;
-                  width: 150px;
-                }
-              }
-            }
-            .menu__col-one-two {
-              margin-right: 2em;
-              .menu__col-group {
-                font-size: 1rem;
-                line-height: 2;
-                padding: 0.5em 0;
-                a {
-                  display: flex;
-                  flex-direction: row;
-                  line-height: 1;
-                  .col__img {
-                    img {
-                      text-align: center;
-                      width: 40px;
-                      height: 40px;
-                      margin-right: 1em;
-                      border-radius: 50%;
-                      box-shadow: 0 4px 6px 1px rgba(91, 97, 110, 0.3);
-                    }
+                flex-direction: column;
+                width: 320px;
+                margin: 0.4em 1.2em 1.1em 0;
+                .learn__dropdown-box,
+                .individuals__dropdown-box,
+                .businesses__dropdown-box,
+                .developers__dropdown-box,
+                .company__dropdown-box {
+                  h4 {
+                    font-size: 1rem;
+                    font-weight: 500;
                   }
-                  .col__text {
-                    line-height: 1.35;
-                    h4 {
-                      font-size: 1rem;
-                      font-weight: 500;
-                      width: 150px;
-                    }
-
-                    p {
-                      color: rgba($gray--nav-text, 0.6);
-                      font-weight: 400;
-                    }
+                  p {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    padding: 0.7em 0 1em 0;
+                  }
+                  a span {
+                    display: block;
+                    color: $blue;
+                    font-size: 1rem;
+                    padding-top: 0.6em;
+                  }
+                  a span:hover {
+                    color: $blue--nav-hover2;
                   }
                 }
               }
-              .menu__col-group a:hover {
-                h4 {
-                  color: $blue--hover;
-                }
-                p {
-                  color: $black;
-                }
-              }
             }
-            .menu__col-two {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              width: 320px;
-              margin: 0.4em 1.2em 1.1em 0;
-              .learn__dropdown-box,
-              .individuals__dropdown-box,
-              .businesses__dropdown-box,
-              .developers__dropdown-box,
-              .company__dropdown-box {
-                h4 {
-                  font-size: 1rem;
-                  font-weight: 500;
-                }
-                p {
-                  font-size: 1rem;
-                  font-weight: 400;
-                  padding: 0.7em 0 1em 0;
-                }
-                a span {
-                  display: block;
-                  color: $blue;
-                  font-size: 1rem;
-                  padding-top: 0.6em;
-                }
-                a span:hover {
-                  color: $blue--nav-hover2;
-                }
-              }
+            .menu__container a:hover {
+              color: $blue--nav-hover2;
             }
           }
-          .menu__container a:hover {
-            color: $blue--nav-hover2;
-          }
+        }
+        .learn__dropdown:hover .learn__dropdown-menu,
+        .individuals__dropdown:hover .individuals__dropdown-menu,
+        .businesses__dropdown:hover .businesses__dropdown-menu,
+        .developers__dropdown:hover .developers__dropdown-menu,
+        .company__dropdown:hover .company__dropdown-menu {
+          visibility: visible;
         }
       }
       .nav__link:hover {
