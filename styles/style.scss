@@ -21,6 +21,7 @@
   }
   .header__bottom {
     background-color: $white;
+    height: 66px;
     .header__group {
       display: flex;
       justify-content: space-between;
@@ -190,7 +191,6 @@
       .nav__sign-in,
       .nav__sign-up {
         font-size: 0.875rem;
-
         text-decoration: none;
         cursor: pointer;
       }
@@ -203,15 +203,14 @@
         color: $blue;
       }
       .nav__sign-up {
-        color: $white;
-        background-color: $blue;
-        border: 1px solid $blue;
         border-radius: 4px;
+        font-weight: 500;
+        color: $white;
         padding: 0.625em 0.75em;
-        text-decoration: none;
-        span {
-          font-weight: 500;
-        }
+        line-height: 14px;
+        border: 1px solid $blue;
+        background-color: $blue;
+        cursor: pointer;
       }
       .nav__sign-up:hover {
         background-color: $blue--hover;
@@ -227,7 +226,7 @@
   .future__container {
     @include container_1;
     .img {
-      max-width: 640px;
+      max-width: 636px;
       width: 100%;
       margin: 3em 0;
     }
@@ -237,11 +236,10 @@
       align-items: flex-start;
       flex-direction: column;
       line-height: 1.2;
-      padding: 0 1.5em;
       .title {
         font-size: 4rem;
         font-weight: 400;
-        line-height: 1;
+        line-height: 1.1;
         width: 100%;
       }
       .text {
