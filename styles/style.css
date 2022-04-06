@@ -3,10 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .header {
@@ -26,7 +23,7 @@ body {
           align-items: center;
   height: 37px;
   color: #ffffff;
-  font-size: 1.09rem;
+  font-size: 1rem;
   font-weight: 500;
   background-color: #0052ff;
   padding-bottom: 2px;
@@ -34,11 +31,6 @@ body {
 
 .header .header__top .text {
   cursor: pointer;
-}
-
-.header .header__top .text .fa-arrow-right-long {
-  margin: 5px 0 0 5px;
-  font-size: 0.9rem;
 }
 
 .header .header__bottom {
@@ -77,10 +69,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-top: 0.15em;
-  margin-left: 2em;
+  margin-left: 2.5em;
   text-transform: capitalize;
 }
 
@@ -104,7 +95,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 66px;
-  margin: 0 1.6em;
+  margin: 0 1.3em;
   border-bottom: 4px solid transparent;
   cursor: pointer;
 }
@@ -196,7 +187,7 @@ body {
 .header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two,
 .header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two,
 .header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two {
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 .header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group,
@@ -229,9 +220,21 @@ body {
 .header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img,
 .header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img,
 .header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__img img {
+  text-align: center;
   width: 40px;
   height: 40px;
   margin-right: 1em;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 6px 1px rgba(91, 97, 110, 0.3);
+          box-shadow: 0 4px 6px 1px rgba(91, 97, 110, 0.3);
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text {
+  line-height: 1.35;
 }
 
 .header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text h4,
@@ -250,6 +253,23 @@ body {
 .header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p,
 .header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a .col__text p {
   color: rgba(17, 51, 83, 0.6);
+  font-weight: 400;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover h4,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover h4,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover h4,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover h4,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover h4 {
+  color: #004beb;
+}
+
+.header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover p,
+.header .header__bottom .header__group .nav .individuals__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover p,
+.header .header__bottom .header__group .nav .businesses__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover p,
+.header .header__bottom .header__group .nav .developers__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover p,
+.header .header__bottom .header__group .nav .company__dropdown-menu .menu__container .menu__col-one-two .menu__col-group a:hover p {
+  color: #0a0b0d;
 }
 
 .header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two,
@@ -271,7 +291,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 320px;
-  margin: 0.5em 1.2em 1.1em 0;
+  margin: 0.4em 1.2em 1.1em 0;
 }
 
 .header .header__bottom .header__group .nav .learn__dropdown-menu .menu__container .menu__col-two .learn__dropdown-box h4,
@@ -405,19 +425,19 @@ body {
 }
 
 .header .header__bottom .nav__sign-in-up {
-  padding: 1.25em 0;
+  padding: 0.9375em 0;
 }
 
 .header .header__bottom .nav__sign-in-up .nav__sign-in,
 .header .header__bottom .nav__sign-in-up .nav__sign-up {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.875rem;
   text-decoration: none;
   cursor: pointer;
 }
 
 .header .header__bottom .nav__sign-in-up .nav__sign-in {
   color: #0a0b0d;
+  font-weight: 500;
   margin-right: 1em;
 }
 
@@ -430,8 +450,12 @@ body {
   background-color: #0052ff;
   border: 1px solid #0052ff;
   border-radius: 4px;
-  padding: 0.7em 1em;
+  padding: 0.625em 0.75em;
   text-decoration: none;
+}
+
+.header .header__bottom .nav__sign-in-up .nav__sign-up span {
+  font-weight: 500;
 }
 
 .header .header__bottom .nav__sign-in-up .nav__sign-up:hover {
@@ -5141,7 +5165,7 @@ body {
   width: 112px;
 }
 
-.footer .footer__container .col__1 .lang__selecter {
+.footer .footer__container .col__1 .lang__selector {
   padding: 0.25em;
   margin-bottom: 1.6em;
   border: 1px solid rgba(91, 97, 110, 0.2);
