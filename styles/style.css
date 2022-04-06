@@ -144,8 +144,8 @@
   padding: 2.4em;
   z-index: 1;
   visibility: hidden;
-  -webkit-transition: visibility .2s ease-in-out;
-  transition: visibility .2s ease-in-out;
+  -webkit-transition: visibility .1s ease-in-out;
+  transition: visibility .1s ease-in-out;
 }
 
 .header .header__bottom .header__group .nav .learn__dropdown .learn__dropdown-menu .menu__container,
