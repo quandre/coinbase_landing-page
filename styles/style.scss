@@ -164,6 +164,138 @@
       }
     }
   }
+
+  .trade,
+  .wallet,
+  .card,
+  .institutional {
+    .trade__container,
+    .wallet__container,
+    .card__container,
+    .institutional__container {
+      .trade__img,
+      .wallet__img,
+      .card__img,
+      .institutional__img {
+        img {
+          max-width: 345px !important;
+          height: 633px !important;
+        }
+      }
+      .trade__text-box,
+      .wallet__text-box,
+      .card__text-box,
+      .institutional__text-box {
+        max-width: 422px !important;
+        padding: 0 1.5em !important;
+        .trade__text,
+        .wallet__text,
+        .card__text,
+        .institutional__text {
+          h2 {
+            font-size: 2.125rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  .misc {
+    flex-direction: column !important;
+    max-width: 768px !important;
+    height: 1149px !important;
+    padding: 5em 2em !important;
+    .misc__earn,
+    .misc__learn {
+      justify-content: center !important;
+      margin: 0 !important;
+      max-width: 768px !important;
+      height: 574.5px !important;
+      .earn__img,
+      .learn__img {
+        img {
+          max-width: 702px !important;
+        }
+      }
+      .earn__text-box,
+      .learn__text-box {
+        h3 {
+          padding: 1.2em 1.2em 0 !important;
+        }
+        p {
+          font-size: 1rem !important;
+          padding: 0.5em 1.5em 2em !important;
+        }
+      }
+    }
+    .misc__earn {
+      margin-bottom: 2.5em !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .trade,
+  .wallet,
+  .card,
+  .institutional {
+    max-width: 630px !important;
+    height: 1075px !important;
+    padding: 2.5em 0 !important;
+    .trade__container,
+    .wallet__container,
+    .card__container,
+    .institutional__container {
+      flex-direction: column !important;
+      width: 100% !important;
+      height: 1074 !important;
+      .trade__img,
+      .wallet__img,
+      .card__img,
+      .institutional__img {
+        img {
+          max-width: 373px !important;
+          max-height: 683px !important;
+        }
+      }
+      .trade__text-box,
+      .wallet__text-box,
+      .card__text-box,
+      .institutional__text-box {
+        max-width: 630px !important;
+        height: 308 !important;
+        padding: 0 1.5em !important;
+        .trade__mini-img,
+        .wallet__mini-img,
+        .card__mini-img,
+        .institutional__mini-img {
+          .coin_logo {
+            max-width: 32px !important;
+            height: 32px !important;
+          }
+          p {
+            margin: 0 !important;
+          }
+        }
+        .trade__text,
+        .wallet__text,
+        .card__text,
+        .institutional__text {
+          height: 100% !important;
+          h2 {
+            font-size: 1.75rem !important;
+            padding: 1.142em 0 !important;
+          }
+          .trade__button,
+          .wallet__button,
+          .card__button,
+          .institutional__button {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .header {
@@ -616,7 +748,7 @@
       }
       .explore__img {
         img {
-          min-width: 502px;
+          max-width: 502px;
           max-height: 396px;
           width: 100%;
           height: 100%;
@@ -660,11 +792,12 @@
     .card__text-box,
     .institutional__text-box {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: flex-start;
+      max-width: 422px;
+      width: 100%;
       flex-direction: column;
-      padding: 0 1.5em 2em 4em;
-      //margin-left: 4em;
+      padding: 0 1.5em 0 4em;
       .trade__mini-img,
       .wallet__mini-img,
       .card__mini-img,
@@ -672,7 +805,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2em 0;
         .coin_logo {
           max-width: 42px;
           width: 100%;
@@ -689,16 +821,15 @@
       .wallet__text,
       .card__text,
       .institutional__text {
-        max-width: 649px;
         width: 100%;
         h2 {
           font-size: 2.3rem;
           font-weight: 400;
-          padding-bottom: 1em;
+          padding: 0.8em 0;
         }
         .text {
           font-size: 1rem;
-          padding-bottom: 3em;
+          padding-bottom: 2em;
           line-height: 1.5;
         }
         .trade__button,
@@ -732,20 +863,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   padding: 5em 2em;
   background-color: $gray--background;
   .misc__earn,
   .misc__learn {
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: $white;
     border: 1px solid rgba($gray, 0.2);
     border-radius: 18px;
     margin: 0 1.3em;
     max-width: 498px;
-    max-height: 486px;
     height: 100%;
     width: 100%;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
