@@ -299,6 +299,19 @@
       }
     }
   }
+
+  .footer {
+    .footer__container {
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      .col__1 {
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        height: 100% !important;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 630px) {
@@ -367,20 +380,19 @@
 
 @media only screen and (max-width: 560px) {
   .about {
+    max-width: 560px !important;
     .about__container {
       flex-direction: column-reverse !important;
       .about__text {
-        margin-top: 2em;
+        margin-top: 2em !important;
         max-width: 768px !important;
-        height: 288px !important;
+        max-height: 288px !important;
         h2 {
-          max-width: 512px !important;
           font-size: 1.75rem !important;
           padding-bottom: 1em !important;
           margin: 0 !important;
         }
         .sub-text {
-          max-width: 512px !important;
           padding-bottom: 1.2em !important;
           margin: 0 !important;
         }
@@ -402,17 +414,20 @@
   }
 
   .start {
-    max-width: 1025px !important;
-    height: 963px !important;
+    width: 100% !important;
+    height: 100% !important;
     .start__container {
       flex-direction: column !important;
-      max-width: 878px !important;
-      padding: 2.5em 1.5em !important;
+      width: 100% !important;
+      padding: 2em 1.5em !important;
       .start__img {
-        padding: 5em 0 !important;
+        max-width: 512px !important;
+        max-height: 464px !important;
+        margin: 0 0 2em 0 !important;
+        padding: 0 !important;
         img {
-          max-width: 512px !important;
-          max-height: 464px !important;
+          width: 100% !important;
+          height: 100% !important;
         }
       }
       .start__text {
@@ -1067,20 +1082,19 @@
       align-items: flex-start;
       flex-direction: column;
       padding: 1.5em;
-      height: 100%;
       max-width: 590px;
       width: 100%;
+      height: 100%;
       h2 {
-        max-width: 430px;
         width: 100%;
+        height: 100%;
         font-size: 2.125rem;
         font-weight: 400;
         line-height: 1.1;
-        margin: 1em 0 0.9em 0;
       }
       .sub-text {
-        max-width: 430px;
         width: 100%;
+        height: 100%;
         font-size: 1rem;
         line-height: 1.5;
         margin: 1em 0;
@@ -1203,6 +1217,9 @@
     line-height: 1.3;
     color: $gray;
     padding: 0 1.5em;
+    p {
+      padding-bottom: 1.5em;
+    }
     span {
       color: $blue;
     }
@@ -1215,6 +1232,7 @@
   align-items: center;
   .footer__container {
     @include container_1;
+    flex-flow: wrap;
     padding: 6.25em 1.5em;
     .col__1 {
       display: flex;
