@@ -26,6 +26,42 @@
   }
 }
 
+@media only screen and (max-width: 1025px) {
+  .start {
+    max-width: 1025px !important;
+    height: 1059px !important;
+    .start__container {
+      flex-direction: column !important;
+      max-width: 878px !important;
+      padding: 2.5em 1.5em !important;
+      .start__img {
+        padding: 5em 0 !important;
+        img {
+          width: 638px !important;
+          height: 520px !important;
+        }
+      }
+      .start__text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap !important;
+        max-width: 878px !important;
+        width: 100%;
+        line-height: 1.2;
+        padding: 0 !important;
+        .start__input {
+          max-width: 878px !important;
+          input {
+            max-width: 687px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .future {
     padding: 1.5em 3.5em !important;
@@ -232,6 +268,37 @@
       margin-bottom: 2.5em !important;
     }
   }
+
+  .about {
+    .about__container {
+      flex-direction: column-reverse !important;
+      .about__text {
+        max-width: 768px !important;
+        height: 288px !important;
+        h2 {
+          max-width: 340px !important;
+          font-size: 1.75rem !important;
+          padding-bottom: 1em !important;
+          margin: 0 !important;
+        }
+        .sub-text {
+          max-width: 720px !important;
+          padding-bottom: 1.2em !important;
+          margin: 0 !important;
+        }
+        .about__button {
+          min-width: 138px !important;
+        }
+      }
+
+      .about__img {
+        img {
+          max-width: 768px !important;
+          height: 520px !important;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 630px) {
@@ -291,6 +358,78 @@
           .card__button,
           .institutional__button {
             width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .about {
+    .about__container {
+      flex-direction: column-reverse !important;
+      .about__text {
+        margin-top: 2em;
+        max-width: 768px !important;
+        height: 288px !important;
+        h2 {
+          max-width: 512px !important;
+          font-size: 1.75rem !important;
+          padding-bottom: 1em !important;
+          margin: 0 !important;
+        }
+        .sub-text {
+          max-width: 512px !important;
+          padding-bottom: 1.2em !important;
+          margin: 0 !important;
+        }
+        .about__button {
+          max-width: 512px !important;
+          width: 100%;
+        }
+      }
+
+      .about__img {
+        max-width: 768px !important;
+        max-height: 266px !important;
+        img {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+
+  .start {
+    max-width: 1025px !important;
+    height: 963px !important;
+    .start__container {
+      flex-direction: column !important;
+      max-width: 878px !important;
+      padding: 2.5em 1.5em !important;
+      .start__img {
+        padding: 5em 0 !important;
+        img {
+          max-width: 512px !important;
+          max-height: 464px !important;
+        }
+      }
+      .start__text {
+        flex-wrap: wrap !important;
+        max-width: 878px !important;
+        padding: 0 !important;
+        .title {
+          font-size: 1.4rem !important;
+        }
+        .text {
+          font-size: 1.75rem !important;
+          padding: 1em 0 !important;
+        }
+        .start__input {
+          max-width: 878px !important;
+          input {
+            max-width: 687px !important;
           }
         }
       }
@@ -919,32 +1058,34 @@
 .about {
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: $white;
   .about__container {
     @include container_1;
     .about__text {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
-      padding: 1.5em 1.5em 1.5em 0;
+      padding: 1.5em;
       height: 100%;
       max-width: 590px;
       width: 100%;
       h2 {
+        max-width: 430px;
+        width: 100%;
         font-size: 2.125rem;
         font-weight: 400;
         line-height: 1.1;
         margin: 1em 0 0.9em 0;
       }
       .sub-text {
+        max-width: 430px;
+        width: 100%;
         font-size: 1rem;
         line-height: 1.5;
         margin: 1em 0;
       }
       .about__button {
-        position: relative;
         right: 125px;
         background-color: $blue;
         border: 1px solid $blue;
@@ -964,6 +1105,8 @@
 
     .about__img {
       display: flex;
+      width: 100%;
+      height: 100%;
       img {
         max-width: 590px;
         width: 100%;
@@ -978,16 +1121,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 650px;
   .start__container {
     @include container_2;
     padding: 2.5em 0;
     .start__img {
       padding: 4.5em 5em 4em;
       img {
-        max-width: 478px;
-        max-height: 434px;
-        width: 100%;
-        height: 100%;
+        width: 478px;
+        height: 430px;
         object-fit: cover;
       }
     }
@@ -996,6 +1138,7 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
+      flex-wrap: wrap;
       max-width: 542px;
       width: 100%;
       line-height: 1.2;
@@ -1004,7 +1147,7 @@
         font-size: 1.75rem;
       }
       .text {
-        font-size: 4.3rem;
+        font-size: 4rem;
         font-weight: 400;
         line-height: 1;
         padding: 0.25em 0 0.625em;
@@ -1014,16 +1157,16 @@
         }
       }
       .start__input {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        max-width: 480px;
+        width: 100%;
         input {
           border: 1px solid rgba($gray, 0.2);
           border-radius: 6px;
-          max-width: 332px;
+          max-width: 512px;
           width: 100%;
           font-size: 1rem;
           padding: 1.0625em;
+          margin-bottom: 2em !important;
         }
         input::placeholder {
           font-size: 1.2em;
@@ -1035,14 +1178,12 @@
           padding: 1em 1.5em;
           color: $white;
           font-size: 1rem;
+          max-width: 512px !important;
+          width: 100% !important;
           font-weight: 600;
-          margin-left: 1em;
           text-decoration: none;
           user-select: none;
           cursor: pointer;
-        }
-        .start__button:hover {
-          background-color: $blue--hover;
         }
       }
     }
