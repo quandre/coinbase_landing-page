@@ -35,10 +35,11 @@
       max-width: 878px !important;
       padding: 2.5em 1.5em !important;
       .start__img {
+        max-width: 638px !important;
+        max-height: 520px !important;
         padding: 5em 0 !important;
         img {
-          width: 638px !important;
-          height: 520px !important;
+          
         }
       }
       .start__text {
@@ -71,7 +72,6 @@
       align-items: flex-start !important;
       flex-direction: column !important;
       width: 100% !important;
-      height: 522px !important;
       padding: 5em 0;
       .future__img {
         .img {
@@ -109,7 +109,7 @@
             color: #f9ae76 !important;
           }
           .future__button {
-            min-width: 156px !important;
+            max-width: 156px !important;
             font-size: 1rem !important;
             font-weight: 700 !important;
             height: 68px !important;
@@ -237,35 +237,39 @@
   }
 
   .misc {
+    display: flex !important;
+    justify-content: space-between !important;
     flex-direction: column !important;
+    row-gap: 1em !important;
     max-width: 768px !important;
-    height: 1149px !important;
+    max-height: 1200px !important;
     padding: 5em 2em !important;
     .misc__earn,
     .misc__learn {
-      justify-content: center !important;
-      margin: 0 !important;
-      max-width: 768px !important;
-      height: 574.5px !important;
-      .earn__img,
-      .learn__img {
-        img {
-          max-width: 702px !important;
+      width: 100% !important;
+      .misc__container {
+        justify-content: center !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 0 !important;
+        .earn__img,
+        .learn__img {
+          img {
+            width: 100%;
+            object-fit: cover !important;
+          }
+        }
+        .earn__text-box,
+        .learn__text-box {
+          h3 {
+            padding: 1.2em 1.2em 0 !important;
+          }
+          p {
+            font-size: 1rem !important;
+            padding: 0.5em 1.5em 2em !important;
+          }
         }
       }
-      .earn__text-box,
-      .learn__text-box {
-        h3 {
-          padding: 1.2em 1.2em 0 !important;
-        }
-        p {
-          font-size: 1rem !important;
-          padding: 0.5em 1.5em 2em !important;
-        }
-      }
-    }
-    .misc__earn {
-      margin-bottom: 2.5em !important;
     }
   }
 
@@ -274,7 +278,6 @@
       flex-direction: column-reverse !important;
       .about__text {
         max-width: 768px !important;
-        height: 288px !important;
         h2 {
           max-width: 340px !important;
           font-size: 1.75rem !important;
@@ -292,10 +295,9 @@
       }
 
       .about__img {
-        img {
-          max-width: 768px !important;
-          height: 520px !important;
-        }
+        max-width: 768px !important;
+        max-height: 520px !important;
+        width: 100% !important;
       }
     }
   }
@@ -315,6 +317,35 @@
 }
 
 @media only screen and (max-width: 630px) {
+  .future {
+    .future__container {
+      .future__text {
+        flex-direction: row !important;
+        max-width: 878px !important;
+        padding: 0 !important;
+        .title {
+          font-size: 1.5rem !important;
+        }
+        .text {
+          font-size: 1.75rem !important;
+          padding: 1em 0 !important;
+        }
+        .future__input {
+          display: flex !important;
+          flex-direction: column !important;
+          max-width: 630px !important;
+          input {
+            max-width: 630px !important;
+          }
+          .future__button {
+            margin: 2em 0 0 0 !important;
+            max-width: 630px !important;
+          }
+        }
+      }
+    }
+  }
+
   .trade,
   .wallet,
   .card,
@@ -384,9 +415,7 @@
     .about__container {
       flex-direction: column-reverse !important;
       .about__text {
-        margin-top: 2em !important;
         max-width: 768px !important;
-        max-height: 288px !important;
         h2 {
           font-size: 1.75rem !important;
           padding-bottom: 1em !important;
@@ -428,6 +457,7 @@
         img {
           width: 100% !important;
           height: 100% !important;
+          object-fit: cover !important;
         }
       }
       .start__text {
@@ -694,7 +724,7 @@
   align-items: center;
   .future__container {
     @include container_1;
-    height: 750px;
+    max-height: 750px;
     .future__img {
       .img {
         width: 636px;
@@ -708,7 +738,7 @@
       line-height: 1.2;
       max-width: 544px;
       width: 100%;
-      height: 100%;
+      // height: 100%;
       padding: 0 1.5em 0 0.5em;
       margin-bottom: 1.2em;
       .title {
@@ -725,7 +755,6 @@
       }
       .future__input {
         display: flex;
-        align-items: center;
         width: 100%;
         padding: 0 1em 1.5em 0;
         input {
@@ -748,7 +777,7 @@
           font-size: 1rem;
           font-weight: 600;
           margin-left: 1em;
-          min-width: 108px;
+          max-width: 108px;
           text-decoration: none;
           user-select: none;
           cursor: pointer;
@@ -866,7 +895,7 @@
         padding: 1em 1.5em;
         color: $white;
         font-size: 1rem;
-        min-width: 177px;
+        max-width: 177px;
         font-weight: 700;
         text-decoration: none;
         user-select: none;
@@ -936,7 +965,6 @@
       width: 100%;
       img {
         max-width: 373px;
-        max-height: 709px;
         width: 100%;
         height: 100%;
       }
@@ -1017,54 +1045,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 3rem;
   padding: 5em 2em;
   background-color: $gray--background;
   .misc__earn,
   .misc__learn {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     background-color: $white;
     border: 1px solid rgba($gray, 0.2);
     border-radius: 18px;
-    margin: 0 1.3em;
     max-width: 498px;
+    max-height: 641px;
     height: 100%;
     width: 100%;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
-    a {
-      text-decoration: none;
-    }
-    .earn__img,
-    .learn__img {
-      img {
+    .misc__container {
+      a {
+        text-decoration: none;
+      }
+      .earn__img,
+      .learn__img {
         max-width: 498px;
-        width: 100%;
-        height: 277px;
-        object-fit: cover;
-        border-radius: 18px 18px 0 0;
+        max-height: 277px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 18px 18px 0 0;
+        }
       }
-    }
-    .earn__text-box,
-    .learn__text-box {
-      h3 {
-        font-size: 1.25rem;
-        font-weight: 500;
-        padding: 1.5em 1.5em 0;
+      .earn__text-box,
+      .learn__text-box {
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 500;
+          padding: 1.2em 1.2em 0;
+        }
+        p {
+          color: $gray;
+          font-size: 1rem;
+          padding: 0.5em 1.5em 2em;
+          line-height: 1.7;
+        }
       }
-      p {
-        color: $gray;
-        font-size: 0.98rem;
-        padding: 0.8em 1.7em 2em;
-        line-height: 1.7;
-      }
-    }
-    .earn__more,
-    .learn__more {
-      p {
-        color: $blue;
-        text-align: center;
-        padding: 1.5em 0;
-        border-top: 1px solid rgba($gray, 0.2);
+      .earn__more,
+      .learn__more {
+        p {
+          color: $blue;
+          text-align: center;
+          padding: 1.5em 0;
+          border-top: 1px solid rgba($gray, 0.2);
+        }
       }
     }
   }
@@ -1084,7 +1116,6 @@
       padding: 1.5em;
       max-width: 590px;
       width: 100%;
-      height: 100%;
       h2 {
         width: 100%;
         font-size: 2.125rem;
@@ -1117,12 +1148,11 @@
 
     .about__img {
       display: flex;
-      width: 100%;
-      height: 100%;
+      max-width: 590px;
+      height: 900px;
       img {
-        max-width: 590px;
         width: 100%;
-        height: 900px;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -1138,10 +1168,12 @@
     @include container_2;
     padding: 2.5em 0;
     .start__img {
+      max-width: 478px;
+      // max-height: 433px;
       padding: 4.5em 5em 4em;
       img {
-        width: 478px;
-        height: 430px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -1229,7 +1261,11 @@
   justify-content: center;
   align-items: center;
   .footer__container {
-    @include container_1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1180px;
+    width: 100%;
     flex-flow: wrap;
     padding: 6.25em 1.5em;
     .col__1 {
@@ -1237,17 +1273,15 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
-      padding: 0.25em;
+      padding: 0.25em 0.25em 1em;
       max-width: 377px;
       width: 100%;
-      height: 650px;
       .footer__logo {
+        max-width: 112px;
+        max-height: 20px;
         padding-bottom: 2em;
         img {
-          max-width: 112px;
-          max-height: 20px;
           width: 100%;
-          height: 100%;
         }
       }
       .lang__selector {
@@ -1280,7 +1314,7 @@
       padding: 0.25em;
       max-width: 251px;
       width: 100%;
-      height: 680px;
+      max-height: 680px;
       .col__2-1,
       .col__2-2,
       .col__3-1,

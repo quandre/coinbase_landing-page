@@ -38,11 +38,9 @@
     padding: 2.5em 1.5em !important;
   }
   .start .start__container .start__img {
+    max-width: 638px !important;
+    max-height: 520px !important;
     padding: 5em 0 !important;
-  }
-  .start .start__container .start__img img {
-    width: 638px !important;
-    height: 520px !important;
   }
   .start .start__container .start__text {
     display: -webkit-box;
@@ -92,7 +90,6 @@
         -ms-flex-direction: column !important;
             flex-direction: column !important;
     width: 100% !important;
-    height: 522px !important;
     padding: 5em 0;
   }
   .future .future__container .future__img .img {
@@ -147,7 +144,7 @@
     color: #f9ae76 !important;
   }
   .future .future__container .future__text .future__input .future__button {
-    min-width: 156px !important;
+    max-width: 156px !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
     height: 68px !important;
@@ -629,44 +626,57 @@
     font-size: 2.125rem !important;
   }
   .misc {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+    row-gap: 1em !important;
     max-width: 768px !important;
-    height: 1149px !important;
+    max-height: 1200px !important;
     padding: 5em 2em !important;
   }
   .misc .misc__earn,
   .misc .misc__learn {
+    width: 100% !important;
+  }
+  .misc .misc__earn .misc__container,
+  .misc .misc__learn .misc__container {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    width: 100% !important;
     margin: 0 !important;
-    max-width: 768px !important;
-    height: 574.5px !important;
   }
-  .misc .misc__earn .earn__img img,
-  .misc .misc__earn .learn__img img,
-  .misc .misc__learn .earn__img img,
-  .misc .misc__learn .learn__img img {
-    max-width: 702px !important;
+  .misc .misc__earn .misc__container .earn__img img,
+  .misc .misc__earn .misc__container .learn__img img,
+  .misc .misc__learn .misc__container .earn__img img,
+  .misc .misc__learn .misc__container .learn__img img {
+    width: 100%;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
   }
-  .misc .misc__earn .earn__text-box h3,
-  .misc .misc__earn .learn__text-box h3,
-  .misc .misc__learn .earn__text-box h3,
-  .misc .misc__learn .learn__text-box h3 {
+  .misc .misc__earn .misc__container .earn__text-box h3,
+  .misc .misc__earn .misc__container .learn__text-box h3,
+  .misc .misc__learn .misc__container .earn__text-box h3,
+  .misc .misc__learn .misc__container .learn__text-box h3 {
     padding: 1.2em 1.2em 0 !important;
   }
-  .misc .misc__earn .earn__text-box p,
-  .misc .misc__earn .learn__text-box p,
-  .misc .misc__learn .earn__text-box p,
-  .misc .misc__learn .learn__text-box p {
+  .misc .misc__earn .misc__container .earn__text-box p,
+  .misc .misc__earn .misc__container .learn__text-box p,
+  .misc .misc__learn .misc__container .earn__text-box p,
+  .misc .misc__learn .misc__container .learn__text-box p {
     font-size: 1rem !important;
     padding: 0.5em 1.5em 2em !important;
-  }
-  .misc .misc__earn {
-    margin-bottom: 2.5em !important;
   }
   .about .about__container {
     -webkit-box-orient: vertical !important;
@@ -676,7 +686,6 @@
   }
   .about .about__container .about__text {
     max-width: 768px !important;
-    height: 288px !important;
   }
   .about .about__container .about__text h2 {
     max-width: 340px !important;
@@ -692,9 +701,10 @@
   .about .about__container .about__text .about__button {
     min-width: 138px !important;
   }
-  .about .about__container .about__img img {
+  .about .about__container .about__img {
     max-width: 768px !important;
-    height: 520px !important;
+    max-height: 520px !important;
+    width: 100% !important;
   }
   .footer .footer__container {
     -webkit-box-pack: start !important;
@@ -719,6 +729,38 @@
 }
 
 @media only screen and (max-width: 630px) {
+  .future .future__container .future__text {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    max-width: 878px !important;
+    padding: 0 !important;
+  }
+  .future .future__container .future__text .title {
+    font-size: 1.5rem !important;
+  }
+  .future .future__container .future__text .text {
+    font-size: 1.75rem !important;
+    padding: 1em 0 !important;
+  }
+  .future .future__container .future__text .future__input {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    max-width: 630px !important;
+  }
+  .future .future__container .future__text .future__input input {
+    max-width: 630px !important;
+  }
+  .future .future__container .future__text .future__input .future__button {
+    margin: 2em 0 0 0 !important;
+    max-width: 630px !important;
+  }
   .trade,
   .wallet,
   .card,
@@ -2958,9 +3000,7 @@
             flex-direction: column-reverse !important;
   }
   .about .about__container .about__text {
-    margin-top: 2em !important;
     max-width: 768px !important;
-    max-height: 288px !important;
   }
   .about .about__container .about__text h2 {
     font-size: 1.75rem !important;
@@ -3004,6 +3044,8 @@
   .start .start__container .start__img img {
     width: 100% !important;
     height: 100% !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
   }
   .start .start__container .start__text {
     -ms-flex-wrap: wrap !important;
@@ -4240,7 +4282,7 @@
           align-items: center;
   max-width: 1180px;
   width: 100%;
-  height: 750px;
+  max-height: 750px;
 }
 
 .future .future__container .future__img .img {
@@ -4263,7 +4305,6 @@
   line-height: 1.2;
   max-width: 544px;
   width: 100%;
-  height: 100%;
   padding: 0 1.5em 0 0.5em;
   margin-bottom: 1.2em;
 }
@@ -4286,9 +4327,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   padding: 0 1em 1.5em 0;
 }
@@ -4327,7 +4365,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin-left: 1em;
-  min-width: 108px;
+  max-width: 108px;
   text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -4510,7 +4548,7 @@
   padding: 1em 1.5em;
   color: #ffffff;
   font-size: 1rem;
-  min-width: 177px;
+  max-width: 177px;
   font-weight: 700;
   text-decoration: none;
   -webkit-user-select: none;
@@ -4758,7 +4796,6 @@
 .institutional .institutional__container .card__img img,
 .institutional .institutional__container .institutional__img img {
   max-width: 373px;
-  max-height: 709px;
   width: 100%;
   height: 100%;
 }
@@ -8493,69 +8530,72 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
   padding: 5em 2em;
   background-color: #F5F8FF;
 }
 
 .misc .misc__earn,
 .misc .misc__learn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #ffffff;
   border: 1px solid rgba(91, 97, 110, 0.2);
   border-radius: 18px;
-  margin: 0 1.3em;
   max-width: 498px;
+  max-height: 641px;
   height: 100%;
   width: 100%;
   -webkit-box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
 }
 
-.misc .misc__earn a,
-.misc .misc__learn a {
+.misc .misc__earn .misc__container a,
+.misc .misc__learn .misc__container a {
   text-decoration: none;
 }
 
-.misc .misc__earn .earn__img img,
-.misc .misc__earn .learn__img img,
-.misc .misc__learn .earn__img img,
-.misc .misc__learn .learn__img img {
+.misc .misc__earn .misc__container .earn__img,
+.misc .misc__earn .misc__container .learn__img,
+.misc .misc__learn .misc__container .earn__img,
+.misc .misc__learn .misc__container .learn__img {
   max-width: 498px;
+  max-height: 277px;
+}
+
+.misc .misc__earn .misc__container .earn__img img,
+.misc .misc__earn .misc__container .learn__img img,
+.misc .misc__learn .misc__container .earn__img img,
+.misc .misc__learn .misc__container .learn__img img {
+  height: 100%;
   width: 100%;
-  height: 277px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 18px 18px 0 0;
 }
 
-.misc .misc__earn .earn__text-box h3,
-.misc .misc__earn .learn__text-box h3,
-.misc .misc__learn .earn__text-box h3,
-.misc .misc__learn .learn__text-box h3 {
+.misc .misc__earn .misc__container .earn__text-box h3,
+.misc .misc__earn .misc__container .learn__text-box h3,
+.misc .misc__learn .misc__container .earn__text-box h3,
+.misc .misc__learn .misc__container .learn__text-box h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  padding: 1.5em 1.5em 0;
+  padding: 1.2em 1.2em 0;
 }
 
-.misc .misc__earn .earn__text-box p,
-.misc .misc__earn .learn__text-box p,
-.misc .misc__learn .earn__text-box p,
-.misc .misc__learn .learn__text-box p {
+.misc .misc__earn .misc__container .earn__text-box p,
+.misc .misc__earn .misc__container .learn__text-box p,
+.misc .misc__learn .misc__container .earn__text-box p,
+.misc .misc__learn .misc__container .learn__text-box p {
   color: #5b616e;
-  font-size: 0.98rem;
-  padding: 0.8em 1.7em 2em;
+  font-size: 1rem;
+  padding: 0.5em 1.5em 2em;
   line-height: 1.7;
 }
 
-.misc .misc__earn .earn__more p,
-.misc .misc__earn .learn__more p,
-.misc .misc__learn .earn__more p,
-.misc .misc__learn .learn__more p {
+.misc .misc__earn .misc__container .earn__more p,
+.misc .misc__earn .misc__container .learn__more p,
+.misc .misc__learn .misc__container .earn__more p,
+.misc .misc__learn .misc__container .learn__more p {
   color: #0052ff;
   text-align: center;
   padding: 1.5em 0;
@@ -8603,7 +8643,6 @@
   padding: 1.5em;
   max-width: 590px;
   width: 100%;
-  height: 100%;
 }
 
 .about .about__container .about__text h2 {
@@ -8645,14 +8684,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: 100%;
+  max-width: 590px;
+  height: 900px;
 }
 
 .about .about__container .about__img img {
-  max-width: 590px;
   width: 100%;
-  height: 900px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -8686,12 +8724,13 @@
 }
 
 .start .start__container .start__img {
+  max-width: 478px;
   padding: 4.5em 5em 4em;
 }
 
 .start .start__container .start__img img {
-  width: 478px;
-  height: 430px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -8834,9 +8873,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   max-width: 1180px;
   width: 100%;
   -ms-flex-flow: wrap;
@@ -8858,21 +8897,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.25em;
+  padding: 0.25em 0.25em 1em;
   max-width: 377px;
   width: 100%;
-  height: 650px;
 }
 
 .footer .footer__container .col__1 .footer__logo {
+  max-width: 112px;
+  max-height: 20px;
   padding-bottom: 2em;
 }
 
 .footer .footer__container .col__1 .footer__logo img {
-  max-width: 112px;
-  max-height: 20px;
   width: 100%;
-  height: 100%;
 }
 
 .footer .footer__container .col__1 .lang__selector {
@@ -8917,7 +8954,7 @@
   padding: 0.25em;
   max-width: 251px;
   width: 100%;
-  height: 680px;
+  max-height: 680px;
 }
 
 .footer .footer__container .col__2 .col__2-1,
