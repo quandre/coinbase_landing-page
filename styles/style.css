@@ -657,6 +657,12 @@
     width: 100% !important;
     margin: 0 !important;
   }
+  .misc .misc__earn .misc__container .earn__img,
+  .misc .misc__earn .misc__container .learn__img,
+  .misc .misc__learn .misc__container .earn__img,
+  .misc .misc__learn .misc__container .learn__img {
+    height: auto !important;
+  }
   .misc .misc__earn .misc__container .earn__img img,
   .misc .misc__earn .misc__container .learn__img img,
   .misc .misc__learn .misc__container .earn__img img,
@@ -8527,9 +8533,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-column-gap: 3rem;
           column-gap: 3rem;
   padding: 5em 2em;
@@ -8542,8 +8545,6 @@
   border: 1px solid rgba(91, 97, 110, 0.2);
   border-radius: 18px;
   max-width: 498px;
-  max-height: 641px;
-  height: 100%;
   width: 100%;
   -webkit-box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.02);
@@ -8558,16 +8559,16 @@
 .misc .misc__earn .misc__container .learn__img,
 .misc .misc__learn .misc__container .earn__img,
 .misc .misc__learn .misc__container .learn__img {
-  max-width: 498px;
-  max-height: 277px;
+  height: 251px;
 }
 
 .misc .misc__earn .misc__container .earn__img img,
 .misc .misc__earn .misc__container .learn__img img,
 .misc .misc__learn .misc__container .earn__img img,
 .misc .misc__learn .misc__container .learn__img img {
-  height: 100%;
+  max-width: 498px;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 18px 18px 0 0;
@@ -8599,6 +8600,7 @@
   color: #0052ff;
   text-align: center;
   padding: 1.5em 0;
+  margin: 0;
   border-top: 1px solid rgba(91, 97, 110, 0.2);
 }
 
