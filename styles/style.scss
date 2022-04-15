@@ -74,8 +74,6 @@
       background: $white !important;
       width: 100vw !important;
       height: 100vh;
-      overflow-x: hidden !important; 
-      overflow-y: auto !important;
       .mobile__menu {
         a {
           text-decoration: none !important;
@@ -87,7 +85,7 @@
             font-size: 1rem !important;
             font-weight: 700 !important;
             color: $black !important;
-            padding: 1.3em 1.3em !important;
+            padding: 1em 1.3em  !important;
           }
           .link__price a {
             max-width: 1050px !important;
@@ -602,6 +600,7 @@
 
 .mobile-active {
   display: block !important;
+  touch-action: none !important;
 }
 
 .active {

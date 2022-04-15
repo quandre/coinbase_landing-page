@@ -72,8 +72,6 @@
     background: #ffffff !important;
     width: 100vw !important;
     height: 100vh;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
   }
   .header .mobile__nav .mobile__menu a {
     text-decoration: none !important;
@@ -84,7 +82,7 @@
     font-size: 1rem !important;
     font-weight: 700 !important;
     color: #0a0b0d !important;
-    padding: 1.3em 1.3em !important;
+    padding: 1em 1.3em  !important;
   }
   .header .mobile__nav .mobile__menu .dropdown .link__price a {
     max-width: 1050px !important;
@@ -3202,6 +3200,8 @@
 
 .mobile-active {
   display: block !important;
+  -ms-touch-action: none !important;
+      touch-action: none !important;
 }
 
 .active {
